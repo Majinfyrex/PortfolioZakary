@@ -51,7 +51,7 @@ function Header() {
           <a href="#projects" className="menu-link">
             <FaProjectDiagram className="mr-2" /> {t('projects')}
           </a>
-          <a href="#contact" className="menu-link">
+          <a href="mailto:benelgharib.zakarypro@gmail.com" className="menu-link">
             <FaEnvelope className="mr-2" /> {t('contact')}
           </a>
           <div className="relative">
@@ -88,7 +88,7 @@ function Header() {
           <a href="#projects" className="text-gray-100 hover:text-white flex items-center">
             <FaProjectDiagram className="mr-2" /> {t('projects')}
           </a>
-          <a href="#contact" className="text-gray-100 hover:text-white flex items-center">
+          <a href="mailto:benelgharib.zakarypro@gmail.com" className="text-gray-100 hover:text-white flex items-center">
             <FaEnvelope className="mr-2" /> {t('contact')}
           </a>
           <div className="relative">
