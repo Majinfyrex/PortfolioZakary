@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #000;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  color: #fff;
+}
+
+.menu-link {
+  text-align: center;
+  display: flex;
+  gap: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  align-items: center;
+  border-radius: 5px;
+  color: #7252ff;
+}
+
+.menu-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.BGblur {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.BGblur2 {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.438);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.gradient-text {
+  font-weight: bold;
+  background: linear-gradient(45deg, #5271FF, #7252ff, #dc52ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-hover {
+  font-weight: bold;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-hover:hover {
+  font-weight: bold;
+  background: linear-gradient(45deg, #5271FF, #7252ff, #dc52ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-Hey {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  font-size: clamp(16px, 4vw, 60px);
+  box-sizing: border-box;
+}
+
+.paralax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}

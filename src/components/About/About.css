@@ -1,0 +1,244 @@
+.about {
+    background: linear-gradient(180deg, #000000, #060022, #00093d);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 30px;
+    width: 100vw; /* Ajuste para ocupar toda a largura da viewport */
+    height: 100%; /* Ajuste para permitir que o conteúdo controle a altura */
+    box-sizing: border-box;
+    overflow: hidden; /* Evita qualquer estouro do conteúdo */
+}
+
+.about h3 {
+    font-size: clamp(18px, 4vw, 30px);
+    margin-top: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contentAbout {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.imgAbout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.imgAbout img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+.boxText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.boxText .textAbout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.boxText .textAbout p {
+    font-size: clamp(14px, 4vw, 18px);
+    color: #ffffffcc;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.boxText .textAbout .btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.boxText .textAbout .btns a {
+    padding: 10px 15px;
+    font-size: clamp(12px, 4vw, 14px);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.boxText .textAbout .btns a:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+.boxText .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.boxText .cards .card {
+    padding: 10px 15px;
+    text-align: center;
+    font-size: clamp(14px, 4vw, 20px);
+    color: #fff;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 300px;
+}
+
+/* Estilo da Jornada Profissional */
+.JourneyProfessional {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.JourneyProfessional h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+.container-p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.contentJourney {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.educacao, .experience {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    min-width: 280px;
+    box-sizing: border-box;
+}
+
+.educacao h3, .experience h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.educacao ul, .experience ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.educacao ul li, .experience ul li {
+    margin-bottom: 20px;
+}
+
+
+.educacao .content, .experience .content {
+    background-color: rgba(255, 255, 255, 0.062);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #ffffffcc;
+}
+
+.educacao .content:hover, .experience .content:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+    color: #fff;
+}
+
+.educacao .content span, .experience .content span {
+    display: block;
+    font-size: 0.9rem;
+    color: #8C52FF;
+    margin-bottom: 5px;
+}
+
+.educacao .content h4, .experience .content h4 {
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+}
+
+.educacao .content p, .experience .content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Ajustes de responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .boxText, .imgAbout img {
+        width: 100%;
+    }
+
+    .contentJourney {
+        flex-direction: column;
+    }
+
+    .educacao, .experience {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .JourneyProfessional {
+        padding: 30px 15px;
+    }
+
+    .container-p {
+        gap: 30px;
+    }
+
+    .contentAbout {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,142 @@
+.bgTools {
+    background: linear-gradient(180deg, #00093d, #060022, #000000);
+}
+
+.gradient-bg {
+    font-weight: bold;
+    background: linear-gradient(45deg, #1d46ff, #4e27fc, #dc52ffd7);
+  }
+
+  .gradient-bg:hover {
+    background: linear-gradient(45deg, #5271FF, #5a35ff, #dc52ff);
+}
+
+/* Estilo base para os botões */
+.btnCategory {
+    padding: 10px 15px;
+    font-size: clamp(14px, 4vw, 18px);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  
+  .btnCategory:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-5px);
+    transition: 0.5s;
+  }
+  
+  .btnCategory:hover .gradient-text {
+    font-weight: bold;
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+  }
+
+  /* Estilo para o botão ativo */
+  .btnCategory.active {
+    background: rgba(255, 255, 255, 0.35);
+    transition: 0.5s;
+  }
+
+  .btnCategory.active .gradient-text {
+    font-weight: bold;
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes grow {
+    from { transform: scale(0.9); opacity: 0.8; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 1s ease forwards;
+  }
+  
+  .animate-grow {
+    animation: grow 0.5s ease forwards;
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Botões de Categoria */
+  .btnCategory {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btnCategory.active {
+    background: linear-gradient(45deg, #5271FF, #7252ff, #dc52ff);
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .btnCategory:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #5271FF, #7252ff, #dc52ff);
+    color: white;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Lista de Ferramentas e Habilidades */
+  ul.space-y-6 li {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  ul.space-y-6 li:hover {
+    transform: translateY(-5px);
+    color: #7252ff;
+  }
+  
+  ul.space-y-6 li i {
+    transition: color 0.3s ease;
+  }
+  
+  ul.space-y-6 li:hover i {
+    color: #7252ff;
+  }
+  
+  /* Barras de Habilidades */
+  .w-full.bg-gray-800 {
+    box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gradient-bg {
+    box-shadow: 0px 4px 15px #7252ff;
+  }
+  

@@ -1,0 +1,72 @@
+/* Garantindo que a imagem de fundo ocupe toda a tela */
+.hero {
+    width: 100vw; /* Ocupa 100% da largura da viewport */
+    height: 100vh; /* Ocupa 100% da altura da viewport */
+    background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    overflow: hidden; /* Evita estouro de conteúdo fora da área visível */
+}
+
+.contentHero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.hero-Hey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    font-size: clamp(16px, 4vw, 60px);
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.hero-Hey h2 {
+    margin-right: 10px;
+}
+
+.contentHero h3 {
+    text-align: center;
+    font-size: clamp(24px, 4vw, 55px);
+    line-height: 65px;
+    box-sizing: border-box;
+}
+
+.btnHero {
+    position: relative;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: clamp(14px, 4vw, 18px);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.205);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.btnHero:hover {
+    background: rgba(255, 255, 255, 0.322);
+    transform: translateY(-5px);
+    transition: .5s;
+}
+
+@media (max-width: 640px) {
+    .hero-Hey h2 {
+        margin-right: 0px;
+    }
+
+    .contentHero h3 {
+        text-align: center;
+        font-size: clamp(24px, 4vw, 55px);
+        line-height: 35px;
+    }
+}
