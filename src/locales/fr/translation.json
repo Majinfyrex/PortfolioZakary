@@ -40,9 +40,9 @@
   "teckenDate": "Décembre 2024 - Avril 2026",
   "viapostDate": "Janvier 2022 - Aout 2024",
   "hospitalDate": "Juillet 2023 - Décembre 2023",
-  "softwareDeveloperDescription": "Description détaillée de votre expérience en tant que développeur de logiciels...",
-  "agentTriDescription": "Description détaillée de votre expérience en tant qu'agent de tri...",
-  "hospitalDescription": "Description détaillée de votre expérience en tant que manipulateur radiologue...",
+  "softwareDeveloperDescription": "• Alternance Full-Stack en méthode Agile (Scrum) au sein d'une équipe de\n6 développeurs, assurant la maintenance et l'évolution des outils internes.\n\n• Refonte graphique d'une application interne de gestionRH (DigiRH) avec\nTailwind CSS, ajout d'un système d'export en CSV pour les congés et les\nTickets Restaurants, améliorant la satisfaction des utilisateurs internes\n(ANGULAR/SYMFONY).\n\n• Pilotage (Lead Technique) du projet subventionné DigiLearnIA : J'ai assuré\nl'intégration d'un agent conversationnel IA dans une plateforme LMS\n(PYTHON/SYMFONY), incluant le recueil et la formalisation des besoins\nutilisateurs, contribuant à la validation et au succès de la première phase du\nprojet.\n\n• Réalisation d'une veille technologique sur les outils et usages de la data\n(analyse, visualisation, IA), débouchant sur des propositions d'architecture\ntechnique pour l'évolution des produits.",
+  "agentTriDescription": "• Optimisé le flux de travail en formant et encadrant une équipe de 6\ncollaborateurs, réduisant le taux d'erreur de tri de 15%.",
+  "hospitalDescription": "• Application rigoureuse des protocoles de radiologie, contribuant à zéro\nincident sur la période.",
 
   "tools": "Outils",
   "skills": "Compétences",
