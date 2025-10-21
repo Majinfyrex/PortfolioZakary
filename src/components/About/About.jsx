@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import imgAbout from "../../assets/Zakary.jpeg";
 import { useTranslation } from 'react-i18next';
 import resume from '../../assets/resume.pdf';
 
+const professionalExperiences = [
+  {
+    id: 1,
+    dateKey: 'teckenDate',
+    titleKey: 'softwareDeveloper',
+    companyKey: 'companyTecken',
+    descriptionKey: 'softwareDeveloperDescription',
+  },
+  {
+    id: 2,
+    dateKey: 'viapostDate',
+    titleKey: 'AgentTri',
+    companyKey: 'companyViapost',
+    descriptionKey: 'agentTriDescription',
+  },
+  {
+    id: 3,
+    dateKey: 'hospitalDate',
+    titleKey: 'Hospital',
+    companyKey: 'companyHospital',
+    descriptionKey: 'hospitalDescription',
+  },
+];
+
 function About() {
   const { t } = useTranslation();
+  const [experienceModalData, setExperienceModalData] = useState(null);
+
+  const handleViewMoreExperience = (experience) => {
+    setExperienceModalData(experience);
+  };
+
+  const handleCloseExperienceModal = () => {
+    setExperienceModalData(null);
+  };
 
   return (
     <div id='about' className="w-screen h-auto min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-black via-[#060022] to-[#00093d] p-8 gap-8 overflow-hidden">
@@ -37,9 +70,6 @@ function About() {
             <div className="flex-1 max-w-[300px] px-4 py-2 text-center text-white text-[clamp(14px,4vw,20px)] rounded-[10px]">
               <h2>{t('experienceYears')} <br /><span className="bg-clip-text gradient-text">{t('experience')}</span></h2>
             </div>
-            {/*<div className="flex-1 max-w-[300px] px-4 py-2 text-center text-white text-[clamp(14px,4vw,20px)] rounded-[10px]">*/}
-            {/*  <h2>{t('projectsGithub')}<br /><span className="bg-clip-text gradient-text">Github</span></h2>*/}
-            {/*</div>*/}
           </div>
         </div>
       </div>
@@ -55,21 +85,21 @@ function About() {
             <ul className="space-y-5">
               <li>
                 <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
-                  <span className="block text-sm gradient-text">{t('Septembre2024')}</span>
+                  <span className="block text-sm gradient-text">{t('diginamicDate')}</span>
                   <h4 className="text-lg mb-2">{t('DevWeb')}</h4>
                   <p className="text-base text-white/80">Diginamic</p>
                 </div>
               </li>
               <li>
                 <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
-                  <span className="block text-sm gradient-text mb-2">{t('Aujourdhui')}</span>
+                  <span className="block text-sm gradient-text mb-2">{t('codecademyFullstackDate')}</span>
                   <h4 className="text-lg mb-2">{t('webAccessibility')}</h4>
                   <p className="text-base text-white/80">CodeCademy</p>
                 </div>
               </li>
               <li>
                 <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
-                  <span className="block text-sm gradient-text mb-2">{t('JuilletAout2024')}</span>
+                  <span className="block text-sm gradient-text mb-2">{t('codecademyFrontendDate')}</span>
                   <h4 className="text-lg mb-2">{t('frontendTraining')}</h4>
                   <p className="text-base text-white/80">CodeCademy</p>
                 </div>
@@ -87,38 +117,45 @@ function About() {
           <div className="flex-1 p-5 rounded-[15px] text-white min-w-[280px] shadow-md transition">
             <h3 className="text-[1.8rem] mb-5 text-center">{t('professionalExperience')}</h3>
             <ul className="space-y-5">
-              <li>
-                <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
-                  <span className="block text-sm gradient-text mb-2">{t('Marçode2022Abrilde2023')}</span>
-                  <h4 className="text-lg mb-2">{t('softwareDeveloper')}</h4>
-                  <p className="text-base text-white/80">{t('companyTecken')}</p>
-                </div>
-              </li>
-              <li>
-                <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
-                  <span className="block text-sm gradient-text mb-2">{t('ViapostTemps')}</span>
-                  <h4 className="text-lg mb-2">{t('AgentTri')}</h4>
-                  <p className="text-base text-white/80">{t('companyViapost')}</p>
-                </div>
-              </li>
-              <li>
-                <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
-                  <span className="block text-sm gradient-text mb-2">{t('JuilletDecembre2023')}</span>
-                  <h4 className="text-lg mb-2">{t('Hospital')}</h4>
-                  <p className="text-base text-white/80">{t('companyHospital')}</p>
-                </div>
-              </li>
-              <li>
-                {/*<div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">*/}
-                {/*  <span className="block text-sm gradient-text mb-2">{t('Maiode2024')}</span>*/}
-                {/*  <h4 className="text-lg mb-2">{t('freelancer')}</h4>*/}
-                {/*  <p className="text-base text-white/80">{t('companyAfago')}</p>*/}
-                {/*</div>*/}
-              </li>
+              {professionalExperiences.map((experience) => (
+                <li key={experience.id}>
+                  <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
+                    <span className="block text-sm gradient-text mb-2">{t(experience.dateKey)}</span>
+                    <h4 className="text-lg mb-2">{t(experience.titleKey)}</h4>
+                    <div className="flex justify-between items-center">
+                      <p className="text-base text-white/80">{t(experience.companyKey)}</p>
+                      <button
+                        onClick={() => handleViewMoreExperience(experience)}
+                        className="bg-blue-600 text-white py-1 px-3 rounded-lg text-sm transition-colors duration-300 hover:bg-blue-700"
+                      >
+                        {t('viewMore')}
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
+
+      {/* Experience Detail Modal */}
+      {experienceModalData && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 p-4">
+          <div className="relative BGblur rounded-xl shadow-xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={handleCloseExperienceModal}
+              className="absolute top-2 right-2 text-gray-100 hover:text-gray-400"
+            >
+              <i className="bx bx-x text-3xl"></i>
+            </button>
+            <h3 className="text-2xl font-bold gradient-text mb-4">{t(experienceModalData.titleKey)}</h3>
+            <p className="text-white text-lg mb-2">{t(experienceModalData.companyKey)}</p>
+            <p className="text-white text-sm mb-4">{t(experienceModalData.dateKey)}</p>
+            <p className="text-white whitespace-pre-line">{t(experienceModalData.descriptionKey)}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
