@@ -10,40 +10,36 @@ function Tools() {
 
   const skills = {
     frontend: [
-      { name: 'HTML5', level: 95, icon: 'bxl-html5' },
-      { name: 'React', level: 70, icon: 'bxl-react' },
-      { name: 'CSS', level: 90, icon: 'bxl-css3' },
-      { name: 'Javascript', level: 85, icon: 'bxl-javascript' },
-      { name: 'Tailwind CSS', level: 80, icon: 'bxl-tailwind-css' },
-      { name: 'TypeScript', level: 70, icon: 'bxl-typescript' },
-      { name: 'Next.js', level: 70, icon: 'bx-code-alt' },
-      { name: 'Python', level: 50, icon: 'bxl-python' },
+      { name: 'HTML5', icon: 'bxl-html5' },
+      { name: 'React', icon: 'bxl-react' },
+      { name: 'CSS3', icon: 'bxl-css3' },
+      { name: 'Javascript', icon: 'bxl-javascript' },
+      { name: 'Tailwind CSS', icon: 'bxl-tailwind-css' },
+      { name: 'TypeScript', icon: 'bxl-typescript' },
+      { name: 'Next.js', icon: 'bx-code-alt' },
+      { name: 'Angular', icon: 'bxl-angular' },
     ],
     backend: [
-      { name: 'Node.js', level: 75, icon: 'bxl-nodejs' },
-      { name: 'Symfony', level: 65, icon: 'bxl-php' },
-      { name: 'Python', level: 50, icon: 'bxl-python' },
-      { name: 'MySQL', level: 60, icon: 'bxl-postgresql' },
+      { name: 'Node.js', icon: 'bxl-nodejs' },
+      { name: 'Symfony', icon: 'bxl-php' },
+      { name: 'Python', icon: 'bxl-python' },
+      { name: 'MySQL', icon: 'bxl-postgresql' },
+      { name: 'REST APIs', icon: 'bx-server' },
     ],
     webDevelopment: [
-      { name: 'HTML5', level: 95, icon: 'bxl-html5' },
-      { name: 'React', level: 70, icon: 'bxl-react' },
-      { name: 'TypeScript', level: 70, icon: 'bxl-typescript' },
-      { name: 'CSS', level: 90, icon: 'bxl-css3' },
-      { name: 'Javascript', level: 85, icon: 'bxl-javascript' },
-      { name: 'Tailwind CSS', level: 80, icon: 'bxl-tailwind-css' },
-      { name: 'Next.js', level: 70, icon: 'bx-code-alt' },
-      { name: 'Node.js', level: 75, icon: 'bxl-nodejs' },
-      { name: 'Symfony', level: 65, icon: 'bxl-php' },
-      { name: 'Python', level: 75, icon: 'bxl-python' },
+      { name: 'HTML5', icon: 'bxl-html5' },
+      { name: 'React', icon: 'bxl-react' },
+      { name: 'TypeScript', icon: 'bxl-typescript' },
+      { name: 'CSS3', icon: 'bxl-css3' },
+      { name: 'Javascript', icon: 'bxl-javascript' },
+      { name: 'Tailwind CSS', icon: 'bxl-tailwind-css' },
+      { name: 'Next.js', icon: 'bx-code-alt' },
+      { name: 'Angular', icon: 'bxl-angular' },
+      { name: 'Node.js', icon: 'bxl-nodejs' },
+      { name: 'Symfony', icon: 'bxl-php' },
+      { name: 'Python', icon: 'bxl-python' },
+      { name: 'MySQL', icon: 'bxl-postgresql' },
     ],
-    // softwareDevelopment: [
-    //   { name: 'Python', level: 75, icon: 'bxl-python' },
-    //   { name: '.Net Framework', level: 70, icon: 'bx-code-alt' },
-    //   { name: 'WPF', level: 70, icon: 'bx-window' },
-    //   { name: 'C#', level: 70, icon: 'bx-code-alt' },
-    //   { name: 'Xaml (Xamarin)', level: 70, icon: 'bx-code-alt' },
-    // ],
   };
 
   const tools = [
@@ -106,22 +102,11 @@ function Tools() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slideUp">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-slideUp">
             {filteredSkills.map((skill, index) => (
-              <div key={index} className="bg-gray-800 bg-opacity-50 rounded-lg p-5 animate-grow">
-                <div className="flex items-center mb-3">
-                  <i className={`bx ${skill.icon} gradient-text text-3xl mr-3`}></i>
-                  <span className="text-white text-lg">{skill.name}</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-3 mb-1">
-                  <div
-                    className="gradient-bg h-3 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-                <div className="text-right">
-                  <span className="gradient-text text-sm">{skill.level}%</span>
-                </div>
+              <div key={index} className="bg-gray-800 bg-opacity-50 rounded-lg p-6 flex flex-col items-center justify-center transform hover:scale-105 transition-transform duration-300 animate-grow">
+                <i className={`bx ${skill.icon} gradient-text text-5xl mb-3`}></i>
+                <span className="text-white text-center text-lg">{skill.name}</span>
               </div>
             ))}
           </div>

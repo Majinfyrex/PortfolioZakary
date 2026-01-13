@@ -11,20 +11,6 @@ const professionalExperiences = [
     companyKey: 'companyTecken',
     descriptionKey: 'softwareDeveloperDescription',
   },
-  {
-    id: 2,
-    dateKey: 'viapostDate',
-    titleKey: 'AgentTri',
-    companyKey: 'companyViapost',
-    descriptionKey: 'agentTriDescription',
-  },
-  {
-    id: 3,
-    dateKey: 'hospitalDate',
-    titleKey: 'Hospital',
-    companyKey: 'companyHospital',
-    descriptionKey: 'hospitalDescription',
-  },
 ];
 
 function About() {
@@ -102,13 +88,6 @@ function About() {
                   <span className="block text-sm gradient-text mb-2">{t('codecademyFrontendDate')}</span>
                   <h4 className="text-lg mb-2">{t('frontendTraining')}</h4>
                   <p className="text-base text-white/80">CodeCademy</p>
-                </div>
-              </li>
-              <li>
-                <div className="bg-white/10 p-4 rounded-[5px] shadow-sm transition hover:bg-white/20">
-                  <span className="block text-sm gradient-text mb-2">2020 - 2023</span>
-                  <h4 className="text-lg mb-2">{t('ManipRadio')}</h4>
-                  <p className="text-base text-white/80">IFSI Montpellier</p>
                 </div>
               </li>
             </ul>
