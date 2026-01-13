@@ -2,15 +2,39 @@ import React, { useState } from 'react';
 import 'tailwindcss/tailwind.css';
 import { useTranslation } from 'react-i18next';
 
-import imgport1 from '../../assets/portfolio/textM.png';
-import imgAfago from '../../assets/portfolio/afago.png';
-import imghabitwave from '../../assets/portfolio/habitwave.png';
+import imgpomodoro from '../../assets/portfolio/Pomodoro.png';
+import imgsnippets from '../../assets/portfolio/Snippets.png';
 import imgkanban from '../../assets/portfolio/taskKanban.png';
-import imgChat from '../../assets/portfolio/RealChat.png';
-import imgPsicoComport from '../../assets/portfolio/psico.png';
+
 
 const projects = [
-  { id: 2, title: 'project2Title', description: 'project2Description', tech: ["PHP"], demo: 'https://github.com/Majinfyrex/PasswordGenerator' },
+  {
+    id: 1,
+    title: 'project1Title',
+    description: 'project1Description',
+    tech: ["React", "Tailwind CSS"],
+    image: imgkanban,
+    demo: 'https://majinfyrex.github.io/Kanban/',
+    repo: 'https://github.com/Majinfyrex/Kanban'
+  },
+  {
+    id: 2,
+    title: 'project2Title',
+    description: 'project2Description',
+    tech: ["React", "Tailwind CSS"],
+    image: imgpomodoro,
+    demo: 'https://majinfyrex.github.io/Pomodoro/',
+    repo: 'https://github.com/Majinfyrex/Pomodoro'
+  },
+  {
+    id: 3,
+    title: 'project3Title',
+    description: 'project3Description',
+    tech: ["React", "Tailwind CSS", "FireBase"],
+    image: imgsnippets,
+    demo: 'https://majinfyrex.github.io/Snippets/',
+    repo: 'https://github.com/Majinfyrex/Snippets'
+  },
 ];
 
 function Portfolio() {
